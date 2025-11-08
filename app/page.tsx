@@ -7,6 +7,7 @@ import Header from "../components/ui/landing/Header";
 import Hero from "../components/ui/landing/Hero";
 import ProductCard from "../components/ui/landing/ProductCard";
 import Footer from "../components/ui/landing/Footer";
+import Dashboard from '@/components/ui/landing/Dashboard';
 
 const dummy = [
   {
