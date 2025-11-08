@@ -11,28 +11,76 @@ import Footer from "../components/ui/landing/Footer";
 const dummy = [
   {
     title: "Wireless Headphones X",
-    image: "/images/headphones.jpg",
+    image: "headphone.webp",
     store: "Amazon",
     high: 2999,
     low: 1599,
     prices: [
       { date: "2025-09-01", price: 2999 },
       { date: "2025-09-15", price: 1999 },
-      { date: "2025-10-01", price: 1599 }
-    ]
+      { date: "2025-10-01", price: 1599 },
+    ],
   },
   {
     title: "Smart Watch Z",
-    image: "/images/watch.jpg",
+    image: "smart_watch.webp",
     store: "Flipkart",
     high: 4999,
     low: 2799,
     prices: [
       { date: "2025-07-01", price: 4999 },
       { date: "2025-09-01", price: 3499 },
-      { date: "2025-10-20", price: 2799 }
-    ]
-  }
+      { date: "2025-10-20", price: 2799 },
+    ],
+  },
+  {
+    title: "Bluetooth Speaker Pro",
+    image: "speaker.avif",
+    store: "Amazon",
+    high: 3499,
+    low: 1999,
+    prices: [
+      { date: "2025-08-01", price: 3499 },
+      { date: "2025-09-10", price: 2499 },
+      { date: "2025-10-15", price: 1999 },
+    ],
+  },
+  {
+    title: "Gaming Mouse Ultra",
+    image: "mouse.webp",
+    store: "Flipkart",
+    high: 2499,
+    low: 1299,
+    prices: [
+      { date: "2025-07-20", price: 2499 },
+      { date: "2025-09-05", price: 1799 },
+      { date: "2025-10-25", price: 1299 },
+    ],
+  },
+  {
+    title: "Mechanical Keyboard K100",
+    image: "key.jpeg",
+    store: "Amazon",
+    high: 5999,
+    low: 3999,
+    prices: [
+      { date: "2025-08-10", price: 5999 },
+      { date: "2025-09-20", price: 4999 },
+      { date: "2025-10-30", price: 3999 },
+    ],
+  },
+  {
+    title: "4K Action Camera",
+    image: "Camera.jpg",
+    store: "Flipkart",
+    high: 8999,
+    low: 5999,
+    prices: [
+      { date: "2025-07-01", price: 8999 },
+      { date: "2025-09-01", price: 7499 },
+      { date: "2025-10-15", price: 5999 },
+    ],
+  },
 ];
 
 export default async function Home() {
