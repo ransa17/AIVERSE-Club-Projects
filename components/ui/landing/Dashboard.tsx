@@ -20,22 +20,28 @@ import {
 import React from "react";
 
 const priceHistory = [
-  { date: "Nov 1", price: 1999 },
-  { date: "Nov 2", price: 1899 },
-  { date: "Nov 3", price: 1799 },
-  { date: "Nov 4", price: 1699 },
-  { date: "Nov 5", price: 1599 },
-  { date: "Nov 6", price: 1499 },
-  { date: "Nov 7", price: 1399 },
+  { date: "2025-07-01", price: 6999 }, // Smart Watch Z + 4K Camera
+  { date: "2025-07-20", price: 2499 }, // Gaming Mouse Ultra
+  { date: "2025-08-01", price: 3499 }, // Speaker
+  { date: "2025-08-10", price: 5999 }, // Keyboard
+  { date: "2025-09-01", price: 4665 }, // Headphones + Smart Watch + Camera
+  { date: "2025-09-05", price: 1799 }, // Mouse
+  { date: "2025-09-10", price: 2499 }, // Speaker
+  { date: "2025-09-15", price: 1999 }, // Headphones
+  { date: "2025-09-20", price: 4999 }, // Keyboard
+  { date: "2025-10-01", price: 1599 }, // Headphones
+  { date: "2025-10-15", price: 3999 }, // Speaker + Camera
+  { date: "2025-10-20", price: 2799 }, // Smart Watch
+  { date: "2025-10-25", price: 1299 }, // Mouse
+  { date: "2025-10-30", price: 3999 }, // Keyboard
 ];
 
 const productDistribution = [
-  { name: "Electronics", value: 400 },
-  { name: "Home", value: 300 },
-  { name: "Fashion", value: 300 },
-  { name: "Books", value: 200 },
+  { name: "Audio", value: 2 },       // Headphones, Speaker
+  { name: "Wearables", value: 1 },   // Smart Watch
+  { name: "Peripherals", value: 2 }, // Mouse, Keyboard
+  { name: "Cameras", value: 1 },     // Action Camera
 ];
-
 const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042"];
 
 export default function DashboardPage() {

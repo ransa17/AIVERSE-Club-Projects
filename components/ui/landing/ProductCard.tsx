@@ -1,5 +1,6 @@
 // components/landing/ProductCard.tsx
 import React from "react";
+import Image from "next/image";
 import PriceChart from "./PriceChart";
 
 type Product = {
@@ -14,7 +15,14 @@ type Product = {
 export default function ProductCard({ product }: { product: Product }) {
   return (
     <article className="bg-white rounded-xl shadow p-4 flex gap-4 items-center">
-      <img src={product.image} alt={product.title} className="w-20 h-20 object-cover rounded" />
+      <div className="relative w-20 h-20 shrink-0">
+        <Image 
+          src={`/${product.image}`} 
+          alt={product.title} 
+          fill
+          className="object-cover rounded"
+        />
+      </div>
       <div className="flex-1">
         <h3 className="font-semibold text-sm text-[#23272a]">{product.title}</h3>
         <p className="text-xs text-gray-500">{product.store}</p>

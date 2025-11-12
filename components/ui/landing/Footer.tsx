@@ -1,16 +1,3 @@
-// // components/landing/Footer.tsx
-// import Link from "next/link";
-// import React from "react";
-
-// export default function Footer() {
-//   return (
-//     <footer className="bg-mainBlue text-white mt-12 py-8 text-center text-sm">
-//       <div className="max-w-6xl mx-auto">
-//         © {new Date().getFullYear()} Price Tracker — Built by AIVERSE
-//       </div>
-//     </footer>
-//   );
-// }
 import React from "react";
 
 export default function Footer() {
@@ -27,9 +14,9 @@ export default function Footer() {
 
         {/* Bottom section: Links */}
         <div className="flex space-x-6 justify-center">
-          <a href="/about" className="hover:text-gray-900 transition">About</a>
-          <a href="/privacy" className="hover:text-gray-900 transition">Privacy</a>
-          <a href="/contact" className="hover:text-gray-900 transition">Contact</a>
+          <a href="/About" className="hover:text-gray-900 transition">About</a>
+          <a href="/Privacy" className="hover:text-gray-900 transition">Privacy</a>
+          <a href="/Contact" className="hover:text-gray-900 transition">Contact</a>
         </div>
       </div>
     </footer>
