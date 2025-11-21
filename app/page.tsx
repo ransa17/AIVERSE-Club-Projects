@@ -1,13 +1,9 @@
 // app/page.tsx
 import React from "react";
-import Link from "next/link";
-import { auth } from "../auth";
-import LoginView from "../app/LoginView";
 import Header from "../components/ui/landing/Header";
 import Hero from "../components/ui/landing/Hero";
 import ProductCard from "../components/ui/landing/ProductCard";
 import Footer from "../components/ui/landing/Footer";
-
 
 const dummy = [
   {
@@ -84,25 +80,17 @@ const dummy = [
   },
 ];
 
-export default async function Home() {
-  const session = await auth();
-  const user = session?.user;
-
- 
-  if (!user) {
-    return <LoginView />;
-  }
-
- 
+export default function Home() {
   return (
     <>
       <Header />
 
       <main className="min-h-screen bg-[#f3f4f6] text-[#23272a]">
         <div className="max-w-6xl mx-auto px-6">
-          
+          {/* Hero section */}
           <Hero />
 
+          {/* Product cards */}
           <section className="mt-8">
             <h2 className="text-xl font-semibold mb-4">Top price drops</h2>
             <div className="grid md:grid-cols-2 gap-4">
