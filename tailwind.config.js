@@ -16,6 +16,7 @@ module.exports = {
         cardBase: "#ffffff",
         priceUp: "#dc143c",
         priceDown: "#2ecc71",
+        brandOrange: "#f97316",
       }
     },
   },

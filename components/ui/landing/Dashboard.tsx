@@ -42,51 +42,72 @@ const productDistribution = [
   { name: "Peripherals", value: 2 }, // Mouse, Keyboard
   { name: "Cameras", value: 1 },     // Action Camera
 ];
+
 const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042"];
+
 
 export default function DashboardPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold mb-6 text-center">📊 Price History Dashboard</h1>
+    <div className="max-w-7xl mx-auto px-4 py-10 text-[#23272a]">
+      <h1 className="text-3xl font-bold mb-6 text-center text-[var(--primary)]">
+        📊 Price History Dashboard
+      </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Line Chart */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-          <h2 className="text-lg font-semibold mb-4">Price Trend (Last 7 Days)</h2>
+        <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <h2 className="text-lg font-semibold mb-4 text-[#23272a]">
+            Price Trend (Last 7 Days)
+          </h2>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={priceHistory}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="date" />
               <YAxis />
               <Tooltip />
-              <Line type="monotone" dataKey="price" stroke="#8884d8" strokeWidth={2} />
+              <Line
+                type="monotone"
+                dataKey="price"
+                stroke="#f97316"
+                strokeWidth={2}
+              />
             </LineChart>
           </ResponsiveContainer>
         </div>
 
         {/* Area Chart */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-          <h2 className="text-lg font-semibold mb-4">Price Drop Acceleration</h2>
+        <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <h2 className="text-lg font-semibold mb-4 text-[#23272a]">
+            Price Drop Acceleration
+          </h2>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={priceHistory}>
               <defs>
                 <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-                  <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#f97316" stopOpacity={0.8} />
+                  <stop offset="95%" stopColor="#f97316" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <XAxis dataKey="date" />
               <YAxis />
               <CartesianGrid strokeDasharray="3 3" />
               <Tooltip />
-              <Area type="monotone" dataKey="price" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPrice)" />
+              <Area
+                type="monotone"
+                dataKey="price"
+                stroke="#f97316"
+                fillOpacity={1}
+                fill="url(#colorPrice)"
+              />
             </AreaChart>
           </ResponsiveContainer>
         </div>
 
         {/* Bar Chart */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-          <h2 className="text-lg font-semibold mb-4">Daily Price Comparison</h2>
+        <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <h2 className="text-lg font-semibold mb-4 text-[#23272a]">
+            Daily Price Comparison
+          </h2>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={priceHistory}>
               <CartesianGrid strokeDasharray="3 3" />
@@ -94,13 +115,16 @@ export default function DashboardPage() {
               <YAxis />
               <Tooltip />
               <Bar dataKey="price" fill="#ffc658" />
+
             </BarChart>
           </ResponsiveContainer>
         </div>
 
         {/* Pie Chart */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
-          <h2 className="text-lg font-semibold mb-4">Product Category Distribution</h2>
+        <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+          <h2 className="text-lg font-semibold mb-4 text-[#23272a]">
+            Product Category Distribution
+          </h2>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
@@ -114,7 +138,10 @@ export default function DashboardPage() {
                 label
               >
                 {productDistribution.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
                 ))}
               </Pie>
               <Tooltip />
