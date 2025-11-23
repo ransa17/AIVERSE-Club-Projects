@@ -1,15 +1,18 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 border-t border-gray-300 text-sm text-gray-600 mt-10">
-      <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col items-center space-y-4">
+      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center space-y-4">
         {/* Top section: Branding and Copyright */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-center md:space-x-2 text-center">
           <span className="font-semibold text-gray-800">
             Amazon Price History Tracker — Built by AIVERSE
           </span>
-          <span>© {new Date().getFullYear()} — All rights reserved.</span>
+          <span>
+            © {new Date().getFullYear()} — All rights reserved.
+          </span>
         </div>
 
         {/* Bottom section: Links */}

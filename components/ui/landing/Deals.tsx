@@ -41,31 +41,57 @@ const mockDeals = [
 
 export default function Deals() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white px-6 py-16">
+    <main className="min-h-screen bg-[#f3f4f6] text-[#23272a] px-6 py-16">
       <div className="max-w-5xl mx-auto space-y-10">
-        <h1 className="text-4xl font-bold text-center text-amber-400">Smart Shopping Deals & Tools</h1>
-        <p className="text-lg text-gray-300 text-center">
+        
+        {/* Heading */}
+        <h1 className="text-4xl font-bold text-center text-[var(--primary)]">
+          Smart Shopping Deals & Tools
+        </h1>
+
+        <p className="text-lg text-gray-600 text-center">
           Discover tools, extensions, and curated offers to help you shop smarter with Amazon price history insights.
         </p>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {mockDeals.map((deal, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-amber-500/30 transition duration-300"
+              className="
+                bg-white 
+                rounded-xl 
+                p-6 
+                shadow-sm 
+                border border-gray-200
+                hover:shadow-[var(--primary)]/40 
+                hover:shadow-lg 
+                transition 
+                duration-300
+              "
             >
-              <span className="text-sm text-amber-300 font-medium uppercase">{deal.tag}</span>
-              <h2 className="text-xl font-semibold text-white mt-2">{deal.title}</h2>
-              <p className="text-gray-400 mt-2">{deal.description}</p>
+              <span className="text-sm text-[var(--primary)] font-medium uppercase">
+                {deal.tag}
+              </span>
+
+              <h2 className="text-xl font-semibold mt-2 text-[#23272a]">
+                {deal.title}
+              </h2>
+
+              <p className="text-gray-600 mt-2">
+                {deal.description}
+              </p>
+
               <a
                 href={deal.link}
-                className="inline-block mt-4 text-amber-400 hover:underline text-sm font-medium"
+                className="inline-block mt-4 text-[var(--primary)] hover:underline text-sm font-medium"
               >
                 Learn More →
               </a>
             </div>
           ))}
         </div>
+
       </div>
     </main>
   );
