@@ -1,9 +1,9 @@
-// app/page.tsx
 import React from "react";
 import Header from "../components/ui/landing/Header";
 import Hero from "../components/ui/landing/Hero";
 import ProductCard from "../components/ui/landing/ProductCard";
 import Footer from "../components/ui/landing/Footer";
+import ImageCarousel from "@/components/ui/landing/ImageCarousel";
 
 const dummy = [
   {
@@ -84,13 +84,10 @@ export default function Home() {
   return (
     <>
       <Header />
-
+      <ImageCarousel />
       <main className="min-h-screen bg-[#f3f4f6] text-[#23272a]">
         <div className="max-w-6xl mx-auto px-6">
-          {/* Hero section */}
           <Hero />
-
-          {/* Product cards */}
           <section className="mt-8">
             <h2 className="text-xl font-semibold mb-4">Top price drops</h2>
             <div className="grid md:grid-cols-2 gap-4">
@@ -100,7 +97,6 @@ export default function Home() {
             </div>
           </section>
         </div>
-
         <Footer />
       </main>
     </>
