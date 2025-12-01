@@ -93,7 +93,7 @@ export default function Home() {
           {/* Product cards */}
           <section className="mt-8">
             <h2 className="text-xl font-semibold mb-4">Top price drops</h2>
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               {dummy.map((p, i) => (
                 <ProductCard product={p} key={i} />
               ))}
