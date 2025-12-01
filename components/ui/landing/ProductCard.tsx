@@ -35,7 +35,7 @@ export default function ProductCard({ product }: { product: Product }) {
             <p className="text-xs">Lowest</p>
             <p className="font-semibold text-emerald-600">₹{product.low}</p>
           </div>
-          <div className="w-40">
+          <div className="w-30">
             <PriceChart data={product.prices} />
           </div>
         </div>
